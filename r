@@ -1,10 +1,10 @@
-local item = getrenv()._G.classes.FPS.GetEquippedItem.Type
+local item = getrenv()._G.classes.FPS.GetEquippedItem.type
 local original_ps = item.ProjectileSpeed
 local original_pd = item.ProjectileDrop
 
 hookmetamethod(getrenv()._G.classes.FPS.GetEquippedItem, "__index", function(self, index)
     if index == "ProjectileSpeed" then
-        return 999999 
+        return math.huge 
     elseif index == "ProjectileDrop" then
         return 0     end
     return rawget(self, index)
