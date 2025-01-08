@@ -1,23 +1,16 @@
-local item = getrenv()._G.classes.FPS.GetEquippedItem.type
-local original_ps = item.ProjectileSpeed
-local original_pd = item.ProjectileDrop
+local getcframe = getrenv()._G.classes.Camera.GetCframe 
+local enitityplayer = getrenv()._G.classes.Player.EntityMap
 
-hookmetamethod(getrenv()._G.classes.FPS.GetEquippedItem, "__index", function(self, index)
-    if index == "ProjectileSpeed" then
-        return math.huge 
-    elseif index == "ProjectileDrop" then
-        return 0     end
-    return rawget(self, index)
-end)
+local funciton = getplayer
 
-hookmetamethod(getrenv()._G.classes.FPS.GetEquippedItem, "__newindex", function(self, index, value)
-    if index == "ProjectileSpeed" or index == "ProjectileDrop" then
-        rawset(self, index, original_ps) 
-    else
-        rawset(self, index, value)
-    end
-end)
 
+
+
+
+local PDistance = game.workspace.Ignore.LocalCharacter.Middle.Position
+
+
+getcframe.LookAt
 
 print("dis sh dont work")
 	
