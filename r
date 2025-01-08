@@ -19,6 +19,6 @@ hookmetamethod(getrenv()._G.classes.FPS.GetEquippedItem, "__newindex", function(
 end)
 
 
-
+print("dis sh dont work")
 	
 
